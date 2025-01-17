@@ -1,3 +1,3 @@
-for(i of Array(100).keys()){
-    console.log(i);
-}
+const l = {}
+l["hi"] = 1;
+console.log(l);

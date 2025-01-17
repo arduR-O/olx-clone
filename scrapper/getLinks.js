@@ -1,13 +1,7 @@
 import { writeFileSync } from "fs";
 import { By, Builder, Browser } from "selenium-webdriver";
+import { sleep } from "./sleep";
 
-function sleep(ms) {
-  return new Promise((resolve) =>
-    setTimeout(() => {
-      resolve();
-    }, ms)
-  );
-}
 export async function getLinks(link, fileName) {
   const driver = await new Builder().forBrowser(Browser.CHROME).build();
   try {
@@ -27,7 +21,7 @@ export async function getLinks(link, fileName) {
         links[i] = link;
         const jsonLinks = JSON.stringify(links, null, 2);
         writeFileSync(`${fileName}.json`, jsonLinks);
-      } catch(error) {
+      } catch (error) {
         console.log("Hey Bhagwaan ", error);
         break;
       }

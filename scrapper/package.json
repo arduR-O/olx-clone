@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "selenium-webdriver": "^4.27.0",
+    "mocha": "11.0.1"
+  },
+  "type": "module"
+}
